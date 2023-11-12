@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .coin{
+        background-color: hsl(348, 83%, 47%);
+        padding: 10px 20px;
+        color: white;
+        border: 0;
+       }
+       .coin:hover{
+        background-color: white;
+        color: hsl(348, 83%, 47%);
+        border: 0.3px solid hsl(348, 83%, 47%);
+        cursor: pointer;
+        transition-duration: 0.3s;
+       }
+       .coin:active{
+        background-color: hsl(348, 83%, 47%);
+        color: white;
+       }
+       div{
+        display: flex;
+        justify-content: center;
+        transform: translateY(300px);
+    }
+    
+    </style>
+</head>
+<body>
+    <div><button class="coin" onclick="ComputerToss();">Coin</button>
+    </div>
+    <p class="result"></p>
+</body>
+<script>
+    let Toss = '';
+    function ComputerToss(){
+        let Option = Math.random()
+        if(Option <1/2 && Option>=0){
+            Toss = 'Heads';
+        }
+        else{
+            Toss = 'Tails';
+        }
+     console.log(Toss);
+     Result();
+    }
+    function Result(){
+        let Choice = document.querySelector('.result');
+        Choice.innerHTML = `${Toss}`;
+    }
+</script>
+</html>

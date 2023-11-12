@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Lights</title>
+    <style>
+        .lights-div{
+            display: grid;
+            width: 100px;
+            align-content: center;
+            border: solid black;
+            padding: 10px;
+            background-color: rgb(168, 168, 168);
+        }
+        .traffic-light{
+            display: flex;
+        }
+        .red{
+            background-color: red;
+            height: 90px;
+            border: 0.2px solid black;
+            border-radius: 50%;
+            margin: 3px;
+        }
+        .yellow{
+            background-color: rgb(255, 217, 49);
+            height: 90px;
+            border: 0.2px solid black;
+            border-radius: 50%;
+            margin: 3px;
+
+        }
+        .green{
+            background-color: rgb(22, 171, 22);
+            height: 90px;
+            border: 0.2px solid black;
+            border-radius: 50%;
+            margin: 3px;
+
+        }
+        .red-on{
+            opacity: 100%;
+        }
+        .timer{
+            margin: 0.5px;
+            border: solid black;
+            height: 90px;
+            width: 100px;
+            background-color: rgb(168, 168, 168);
+            color: red;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .time{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffic-light">
+    <div class="lights-div"><div
+         class="red">
+    </div>
+    <div class="yellow">
+    </div>
+    <div class="green">
+    </div>
+    </div>
+    <div class="timer"><p class="time">59</p></div>
+</div>
+</body>
+<script>
+
+</script>
+</html>

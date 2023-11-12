@@ -1,0 +1,21 @@
+.he1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    animation: heading1 1s ease-in;
+    animation-duration: 5s;
+} 
+@keyframes heading1{
+   0%{
+    transform: rotate(90deg);
+   }
+   25%{
+    transform: rotate(180deg);
+   }
+   50%{
+    transform: rotate(-180deg);
+   }
+   /* 100%{
+    transform: rotate(-90deg);
+   } */
+}

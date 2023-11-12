@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <link rel="stylesheet" href="/hari.html/personal/CSS/dom-projects.css">
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="Subscribe" onclick="
+        subscribe()
+    ;"><b>Subscribe</b></button>
+    <br>
+    <br>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <div>
+        <input type="number" class="number-box" placeholder="Cost of order" style="height: 30px;" onkeydown="
+            numberBoxEventDown(event);
+            ">
+        <button class="cal-btn" onclick="
+            calci();
+        ">Calculate</button>
+    </div>
+    <p class="total-cost"></p>
+    <p>Rock Paper Scissors</p>
+    <a href="/hari.html/personal/HTML/rock-paper-scissors.html">Click Here</a>
+    <script src="/hari.html/personal/JS/dom-projects.js">
+    </script>
+</body>

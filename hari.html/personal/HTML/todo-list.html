@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Todo List</h2>
+    <input class="task-box" onkeydown="keydowntask(event);" type="text" placeholder="Add Task to do">
+    <button class="add-btn" onclick="adding();">Add</button>
+    <button class="resetTasks" onclick="reset()">Reset</button>
+    <div class="show-tasks"></div>
+</body>
+<script>
+    let showtask = document.querySelector('.show-tasks');
+    let AllTasks = [];
+    function adding(){
+        let typetask = document.querySelector('.task-box');
+        let task = typetask.value;
+        AllTasks.push(task);
+        typetask.value = '';
+        showing();
+    }
+    function showing(){
+        let todohtml = '';
+        for(let i = 0;i<AllTasks.length;i++){
+            const todo = AllTasks[i];
+            const html = `<p>${todo}</p>`;
+            todohtml += html;
+        }
+        showtask.innerHTML = `${todohtml}`;
+    }
+    function reset(){
+        while(AllTasks.length>0){
+            AllTasks.pop();
+        }
+        showtask.innerHTML ='';
+    }
+    function keydowntask(event){
+        if(event.key === 'Enter'){
+            adding();
+        }
+    }
+</script>
+</html>

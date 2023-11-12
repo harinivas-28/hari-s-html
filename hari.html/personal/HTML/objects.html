@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Object1 = {
+            name: 'Harinivas',
+            ['roll-no']: 2455222748079,
+            'fun': function function1(){
+                console.log("Hello")
+            }
+        }
+// Objects in Js can have functions in it. Objects are like Dictionaries in Python Take as Refernce
+        console.log(Object1.name)//'Harinivas'
+        console.log(['roll-no'])//245522748079 --> Used Closed Braces because The Js takes roll-no as subtraction of roll and no
+        console.log(Object1.fun)//runs function
+        let Json_Object = JSON.stringify(Object1)
+// where JSON only consists of keys but not functions like below
+/*
+        Object1 = {
+            name: 'Harinivas',
+            ['roll-no']: 2455222748079,
+        }
+*/
+// Converting JSON to Js 
+        Object1 = JSON.parse(Json_Object)
+// Storing data in Local Storage which can be restored even when the website is reloaded
+        localStorage.setItem('ObjectName','Object1')
+        // Takes 2 parameters string: name of which to be saved string: name of the variable declared
+// getting the stored data from Local Storage
+        localStorage.getItem('ObjectName')
+// deleting stored data in localstorage
+        localStorage.removeItem('ObjectName')
+//Other: AutoBoxing
+        console.log('Hello'.length)
+        console.log('hello'.toUpperCase())
+// ShortHand or Shortcuts
+        const object1 = {
+            message: 'Hello',
+            price: 899
+        };
+        // const message = object.message storage message of object in a variable of same name
+        // ShortHand
+        const {message, price} = object1; //destructuring
+        console.log(price)
+// ShortCut for declaring function as object property
+        const object2 = {
+            //message: message  (Use Below ShortCut)
+            message,
+            /*
+            method: function functionname(){
+                console.log("Hello");
+            }
+            */ // USE BELOW SHORTCUT
+            method(){
+                console.log("Hello");
+            }
+        }
+        console.log(object2.method)
+    </script>
+</body>
